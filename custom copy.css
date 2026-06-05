@@ -1,0 +1,241 @@
+/* ==========================================================================
+   AJUSTES COMPLEMENTARES
+   --------------------------------------------------------------------------
+   Este arquivo vem depois de styles.css.
+   Use aqui apenas pequenos ajustes, correções finas e overrides globais.
+   ========================================================================== */
+
+/* Mantém badges altmetric/dimensions alinhadas em linha */
+span.__dimensions_badge_embed__,
+div.altmetric-embed {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.about-contact-card {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  width: 100%;
+  max-width: 280px;
+  border: 1px solid var(--hero-border);
+  border-radius: 14px;
+  background: var(--hero-bg);
+  color: var(--hero-text);
+  text-align: center;
+  line-height: 1.6;
+  box-shadow: var(--hero-shadow);
+}
+
+.about-contact-card .contact-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--hero-title);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.about-contact-card .contact-email {
+  color: var(--hero-text);
+  user-select: text;
+  word-break: break-word;
+}
+
+/* Navbar um pouco mais limpa */
+.navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Campo de busca com aparência mais integrada ao tema escuro */
+#quarto-search .aa-DetachedSearchButton,
+#quarto-search .aa-Autocomplete,
+#quarto-search input {
+  border-radius: 10px;
+}
+
+/* Links gerais do site com hover mais suave */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Títulos com aparência um pouco mais forte */
+h1, h2, h3 {
+  text-rendering: optimizeLegibility;
+}
+
+/* Ajuste fino do conteúdo principal */
+main.content {
+  padding-bottom: 2rem;
+}
+
+
+
+/* =========================
+   Custom language picker
+   ========================= */
+
+#google_translate_element {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.custom-language-picker {
+  position: relative;
+  margin-left: 0.75rem;
+}
+
+.language-picker {
+  position: relative;
+}
+
+.language-picker__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  height: 36px;
+  min-width: 148px;
+  padding: 0 0.85rem;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  color: #f5f7fa;
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+}
+
+body.quarto-light .language-picker__trigger {
+  background: #ffffff;
+  color: #1b1f23;
+  border: 1px solid rgba(0,0,0,0.14);
+}
+
+.language-picker__trigger:hover,
+.language-picker__trigger:focus {
+  border-color: rgba(127, 184, 255, 0.38);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(127, 184, 255, 0.10);
+}
+
+.language-picker__label {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.language-picker__caret {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.language-picker.is-open .language-picker__caret {
+  transform: rotate(180deg);
+}
+
+.language-picker__panel {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  width: 280px;
+  max-height: 420px;
+  padding: 0.65rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  background: #232323;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+  z-index: 999999;
+}
+
+body.quarto-light .language-picker__panel {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.language-picker__search-wrap {
+  margin-bottom: 0.55rem;
+}
+
+.language-picker__search {
+  width: 100%;
+  height: 38px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  color: #f5f7fa;
+  padding: 0 0.85rem;
+  outline: none;
+}
+
+body.quarto-light .language-picker__search {
+  background: #f7f7f8;
+  border: 1px solid rgba(0,0,0,0.1);
+  color: #1b1f23;
+}
+
+.language-picker__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-height: 340px;
+  overflow-y: auto;
+  padding-right: 0.15rem;
+}
+
+.language-picker__option {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #f5f7fa;
+  text-align: left;
+  padding: 0.7rem 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+body.quarto-light .language-picker__option {
+  color: #1b1f23;
+}
+
+.language-picker__option:hover,
+.language-picker__option:focus {
+  background: rgba(255,255,255,0.08);
+  outline: none;
+}
+
+body.quarto-light .language-picker__option:hover,
+body.quarto-light .language-picker__option:focus {
+  background: rgba(0,0,0,0.06);
+}
+
+.language-picker__list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.language-picker__list::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.18);
+  border-radius: 999px;
+}
+
+body.quarto-light .language-picker__list::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.18);
+}
+
+@media (max-width: 991.98px) {
+  .custom-language-picker {
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+
+  .language-picker__panel {
+    right: auto;
+    left: 0;
+    width: min(280px, 92vw);
+  }
+}

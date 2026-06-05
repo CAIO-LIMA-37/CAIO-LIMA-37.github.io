@@ -1,231 +1,73 @@
 <style>
-  .navbar-language-item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-left: 0.65rem;
-  }
+.translate-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem 0 1rem;
+}
 
-  .language-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    border: 1px solid rgba(255,255,255,0.14);
-    border-radius: 10px;
-    background: rgba(255,255,255,0.06);
-    color: #f5f7fa;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
+#google_translate_element {
+  transform: scale(0.92);
+  transform-origin: top right;
+}
 
-  .language-toggle:hover,
-  .language-toggle:focus-visible {
-    background: rgba(127,184,255,0.12);
-    border-color: rgba(127,184,255,0.35);
-    outline: none;
-  }
+.goog-te-gadget {
+  font-size: 0 !important;
+  color: transparent !important;
+}
 
-  .language-toggle svg {
-    width: 18px;
-    height: 18px;
-  }
+.goog-te-gadget .goog-te-combo {
+  background: #111;
+  color: #f5f7fa;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.92rem !important;
+}
 
-  body.quarto-light .language-toggle {
-    background: rgba(255,255,255,0.92);
-    color: #1d2733;
-    border: 1px solid rgba(0,0,0,0.12);
-  }
-
-  .language-menu {
-    position: absolute;
-    top: calc(100% + 0.55rem);
-    right: 0;
-    min-width: 190px;
-    padding: 0.45rem;
-    border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.10);
-    background: #141414;
-    box-shadow: 0 14px 34px rgba(0,0,0,0.28);
-    display: none;
-    z-index: 2000;
-  }
-
-  body.quarto-light .language-menu {
-    background: #ffffff;
-    border: 1px solid rgba(0,0,0,0.10);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
-  }
-
-  .language-menu.open {
-    display: block;
-  }
-
-  .language-option {
-    display: block;
-    width: 100%;
-    padding: 0.65rem 0.8rem;
-    border: 0;
-    border-radius: 10px;
-    background: transparent;
-    color: #f5f7fa;
-    text-align: left;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease;
-  }
-
-  .language-option:hover,
-  .language-option:focus-visible {
-    background: rgba(127,184,255,0.14);
-    color: #ffffff;
-    outline: none;
-  }
-
-  body.quarto-light .language-option {
-    color: #1d2733;
-  }
-
-  body.quarto-light .language-option:hover,
-  body.quarto-light .language-option:focus-visible {
-    background: rgba(127,184,255,0.16);
-    color: #102030;
-  }
-
-  #google_translate_element {
-    position: absolute;
-    left: -9999px;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .goog-te-banner-frame.skiptranslate,
-  body > .skiptranslate {
-    display: none !important;
-  }
-
-  body {
-    top: 0 !important;
-  }
-
-  @media (max-width: 991px) {
-    .language-menu {
-      right: 0;
-      min-width: 170px;
-    }
-  }
+body.quarto-light .goog-te-gadget .goog-te-combo {
+  background: #ffffff;
+  color: #1b1f23;
+  border: 1px solid rgba(0,0,0,0.14);
+}
 </style>
 
-<div id="google_translate_element"></div>
+<div class="translate-box">
+  <div id="google_translate_element"></div>
+</div>
 
 <script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-      {
-        pageLanguage: 'en',
-        includedLanguages: 'pt,en,es,fr,de,it',
-        autoDisplay: false,
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      },
-      'google_translate_element'
-    );
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      includedLanguages: 'pt,en,es,fr,de,it',
+      autoDisplay: false,
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    'google_translate_element'
+  );
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const translateBox = document.querySelector(".translate-box");
+
+  const navbarRight =
+    document.querySelector(".navbar .navbar-nav.navbar-nav-scroll.ms-auto") ||
+    document.querySelector(".navbar .navbar-nav.ms-auto") ||
+    document.querySelector(".navbar .navbar-collapse");
+
+  if (!translateBox || !navbarRight) return;
+
+  if (!document.querySelector(".navbar-translate-wrapper")) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "navbar-translate-wrapper custom-language-trigger";
+    wrapper.appendChild(translateBox);
+    navbarRight.appendChild(wrapper);
   }
-
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-      {
-        pageLanguage: 'en',
-        includedLanguages: 'pt,en,es,fr,de,it',
-        autoDisplay: false,
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      },
-      'google_translate_element'
-    );
-  }
-
-  function triggerGoogleTranslate(lang, tries = 0) {
-    const select = document.querySelector('.goog-te-combo');
-
-    if (!select) {
-      if (tries < 40) {
-        setTimeout(() => triggerGoogleTranslate(lang, tries + 1), 250);
-      }
-      return;
-    }
-
-    select.value = lang;
-
-    const event = document.createEvent('HTMLEvents');
-    event.initEvent('change', true, true);
-    select.dispatchEvent(event);
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const navbarRight =
-      document.querySelector(".navbar .navbar-nav.navbar-nav-scroll.ms-auto") ||
-      document.querySelector(".navbar .navbar-nav.ms-auto") ||
-      document.querySelector(".navbar .navbar-collapse .navbar-nav:last-of-type");
-
-    if (!navbarRight || document.querySelector(".navbar-language-item")) return;
-
-    const item = document.createElement("li");
-    item.className = "nav-item navbar-language-item";
-
-    const button = document.createElement("button");
-    button.className = "language-toggle";
-    button.type = "button";
-    button.setAttribute("aria-label", "Choose language");
-    button.setAttribute("aria-expanded", "false");
-    button.innerHTML = `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M4 5h9"></path>
-        <path d="M7 5c0 6 2 10 5 13"></path>
-        <path d="M12 5c0 6-2 10-5 13"></path>
-        <path d="M13 19l4-9 4 9"></path>
-        <path d="M14.5 16h5"></path>
-      </svg>
-    `;
-
-    const menu = document.createElement("div");
-    menu.className = "language-menu";
-    menu.innerHTML = `
-      <button class="language-option" data-lang="en">English</button>
-      <button class="language-option" data-lang="pt">Português</button>
-      <button class="language-option" data-lang="es">Español</button>
-      <button class="language-option" data-lang="fr">Français</button>
-      <button class="language-option" data-lang="de">Deutsch</button>
-      <button class="language-option" data-lang="it">Italiano</button>
-    `;
-
-    item.appendChild(button);
-    item.appendChild(menu);
-    navbarRight.appendChild(item);
-
-    button.addEventListener("click", function (e) {
-      e.stopPropagation();
-      const isOpen = menu.classList.toggle("open");
-      button.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    });
-
-    document.addEventListener("click", function (e) {
-      if (!item.contains(e.target)) {
-        menu.classList.remove("open");
-        button.setAttribute("aria-expanded", "false");
-      }
-    });
-
-    menu.querySelectorAll(".language-option").forEach(option => {
-      option.addEventListener("click", function () {
-        const lang = this.dataset.lang;
-        triggerGoogleTranslate(lang);
-        menu.classList.remove("open");
-        button.setAttribute("aria-expanded", "false");
-      });
-    });
-  });
+});
 </script>
-
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script>

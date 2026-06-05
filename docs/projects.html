@@ -167,16 +167,6 @@ https://badge.dimensions.ai/
 
 
 
-.goog-te-gadget {
-
-  font-size: 0 !important;
-
-  color: transparent !important;
-
-}
-
-
-
 .goog-te-gadget .goog-te-combo {
 
   background: #111;
@@ -235,11 +225,9 @@ function googleTranslateElementInit() {
 
       pageLanguage: 'en',
 
-      includedLanguages: 'pt,en,es,fr,de,it',
-
       autoDisplay: false,
 
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
 
     },
 
@@ -271,15 +259,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  if (!document.querySelector(".navbar-translate-wrapper")) {
+  if (!navbarRight.contains(translateBox)) {
 
-    const wrapper = document.createElement("div");
-
-    wrapper.className = "navbar-translate-wrapper custom-language-trigger";
-
-    wrapper.appendChild(translateBox);
-
-    navbarRight.appendChild(wrapper);
+    navbarRight.appendChild(translateBox);
 
   }
 
@@ -287,10 +269,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </script>
 
+
+
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
-
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {

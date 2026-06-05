@@ -1,0 +1,25 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutEntity = document.querySelector(".about-entity");
+  const aboutLinks = document.querySelector(".about-links");
+
+  if (!aboutEntity || !aboutLinks) return;
+  if (document.querySelector(".about-contact-card")) return;
+
+  const card = document.createElement("div");
+  card.className = "about-contact-card";
+
+  const label = document.createElement("span");
+  label.className = "contact-label";
+  label.textContent = "Contact Email:";
+
+  const email = document.createElement("span");
+  email.className = "contact-email";
+  email.textContent = "pedro.canavieira@icen.ufpa.br";
+
+  card.appendChild(label);
+  card.appendChild(email);
+
+  aboutLinks.insertAdjacentElement("afterend", card);
+});
+</script>

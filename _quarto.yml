@@ -167,3 +167,5 @@ format:
     # Como includes avançados podem gerar efeitos colaterais ou dificultar o debug,
     # o mais seguro neste começo é deixar comentado e reativar só quando você souber exatamente por que precisa.
       - file: includes/translator.html
+
+      - file: includes/about-contact.html

@@ -1,0 +1,261 @@
+/* ==========================================================================
+   AJUSTES COMPLEMENTARES
+   --------------------------------------------------------------------------
+   Este arquivo vem depois de styles.css.
+   Use aqui apenas pequenos ajustes, correções finas e overrides globais.
+   ========================================================================== */
+
+/* Mantém badges altmetric/dimensions alinhadas em linha */
+span.__dimensions_badge_embed__,
+div.altmetric-embed {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.about-contact-card {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  width: 100%;
+  max-width: 280px;
+  border: 1px solid var(--hero-border);
+  border-radius: 14px;
+  background: var(--hero-bg);
+  color: var(--hero-text);
+  text-align: center;
+  line-height: 1.6;
+  box-shadow: var(--hero-shadow);
+}
+
+.about-contact-card .contact-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--hero-title);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.about-contact-card .contact-email {
+  color: var(--hero-text);
+  user-select: text;
+  word-break: break-word;
+}
+
+/* Navbar um pouco mais limpa */
+.navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Campo de busca com aparência mais integrada ao tema escuro */
+#quarto-search .aa-DetachedSearchButton,
+#quarto-search .aa-Autocomplete,
+#quarto-search input {
+  border-radius: 10px;
+}
+
+/* Links gerais do site com hover mais suave */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Títulos com aparência um pouco mais forte */
+h1, h2, h3 {
+  text-rendering: optimizeLegibility;
+}
+
+/* Ajuste fino do conteúdo principal */
+main.content {
+  padding-bottom: 2rem;
+}
+
+
+
+/* Permite que menus e dropdowns escapem da navbar */
+.navbar,
+.navbar .container-fluid,
+.navbar-collapse,
+.navbar-nav,
+#quarto-search {
+  overflow: visible !important;
+}
+
+/* Garante que o tradutor fique acima dos outros itens */
+.translate-box {
+  position: relative;
+  z-index: 2000;
+}
+
+/* Faz o select e o menu abrirem acima da navbar */
+#google_translate_element {
+  position: relative;
+  z-index: 2001;
+}
+
+/* Corrige o painel/dropdown do Google Translate */
+.goog-te-menu-frame.skiptranslate {
+  z-index: 999999 !important;
+}
+
+.navbar-translate-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 0.75rem;
+}
+
+.navbar-translate-wrapper .translate-box {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.navbar-translate-wrapper #google_translate_element {
+  transform: scale(0.92);
+  transform-origin: center right;
+}
+
+/* Esconde o ícone/logo padrão do Google */
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+.custom-language-trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 138px;
+  height: 36px;
+  margin-left: 0.75rem;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+
+body.quarto-light .custom-language-trigger {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.14);
+}
+
+.custom-language-trigger::before {
+  content: "🌐 Language";
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f5f7fa;
+  font-size: 0.86rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 2;
+}
+
+body.quarto-light .custom-language-trigger::before {
+  color: #1b1f23;
+}
+
+.custom-language-trigger::after {
+  content: "▾";
+  position: absolute;
+  right: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #cfd6de;
+  font-size: 0.8rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+body.quarto-light .custom-language-trigger::after {
+  color: #4b5563;
+}
+
+.custom-language-trigger .goog-te-gadget,
+.custom-language-trigger .goog-te-gadget-simple,
+.custom-language-trigger #google_translate_element,
+.custom-language-trigger .goog-te-gadget .goog-te-combo {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.custom-language-trigger .goog-te-gadget {
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+.custom-language-trigger .goog-te-gadget-simple {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.custom-language-trigger .goog-te-gadget .goog-te-combo {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent !important;
+  border: none !important;
+  color: transparent !important;
+  opacity: 0 !important;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.custom-language-trigger .goog-te-gadget .goog-te-combo option {
+  color: #111 !important;
+}
+
+/* Esconde completamente o texto visível nativo do widget */
+.custom-language-trigger .goog-te-gadget-simple .goog-te-menu-value,
+.custom-language-trigger .goog-te-gadget-simple .goog-te-menu-value span,
+.custom-language-trigger .goog-te-gadget-simple .goog-te-menu-value span:first-child,
+.custom-language-trigger .goog-te-gadget-simple .goog-te-menu-value span:last-child {
+  color: transparent !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+/* Remove separadores e seta nativos do Google */
+.custom-language-trigger .goog-te-gadget-simple .goog-te-menu-value img,
+.custom-language-trigger .goog-te-gadget-simple .goog-te-menu-value span[style] {
+  display: none !important;
+}
+
+/* Faz o link interno do widget ocupar toda a área clicável */
+.custom-language-trigger .goog-te-gadget-simple a,
+.custom-language-trigger .goog-te-gadget-simple .goog-te-menu-value {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+  z-index: 3;
+}
+
+.custom-language-trigger .goog-te-gadget-simple span,
+.custom-language-trigger .goog-te-gadget-simple a {
+  color: transparent !important;
+}
+
+/* Mata a seta/separador nativo do link do Google */
+.custom-language-trigger #google_translate_element a > span:last-child,
+.custom-language-trigger #google_translate_element a > span:nth-child(2),
+.custom-language-trigger #google_translate_element a > span:nth-child(3),
+.custom-language-trigger #google_translate_element .goog-te-menu-value > span:last-child,
+.custom-language-trigger #google_translate_element .goog-te-menu-value > span:nth-child(2),
+.custom-language-trigger #google_translate_element .goog-te-menu-value > span:nth-child(3) {
+  display: none !important;
+}
+
+/* Remove qualquer borda vertical da área nativa */
+.custom-language-trigger #google_translate_element a,
+.custom-language-trigger #google_translate_element .goog-te-menu-value {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}

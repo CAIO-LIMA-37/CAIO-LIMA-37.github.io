@@ -1,5 +1,68 @@
-/*Inline block for altmetric badges, will keep the badges in the same line*/
-span.__dimensions_badge_embed__, div.altmetric-embed {
+/* ==========================================================================
+   AJUSTES COMPLEMENTARES
+   --------------------------------------------------------------------------
+   Este arquivo vem depois de styles.css.
+   Use aqui apenas pequenos ajustes, correções finas e overrides globais.
+   ========================================================================== */
+
+/* Mantém badges altmetric/dimensions alinhadas em linha */
+span.__dimensions_badge_embed__,
+div.altmetric-embed {
   display: inline-flex;
   vertical-align: middle;
+}
+
+.about-contact-card {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  width: 100%;
+  max-width: 280px;
+  border: 1px solid var(--hero-border);
+  border-radius: 14px;
+  background: var(--hero-bg);
+  color: var(--hero-text);
+  text-align: center;
+  line-height: 1.6;
+  box-shadow: var(--hero-shadow);
+}
+
+.about-contact-card .contact-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--hero-title);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.about-contact-card .contact-email {
+  color: var(--hero-text);
+  user-select: text;
+  word-break: break-word;
+}
+
+/* Navbar um pouco mais limpa */
+.navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Campo de busca com aparência mais integrada ao tema escuro */
+#quarto-search .aa-DetachedSearchButton,
+#quarto-search .aa-Autocomplete,
+#quarto-search input {
+  border-radius: 10px;
+}
+
+/* Links gerais do site com hover mais suave */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Títulos com aparência um pouco mais forte */
+h1, h2, h3 {
+  text-rendering: optimizeLegibility;
+}
+
+/* Ajuste fino do conteúdo principal */
+main.content {
+  padding-bottom: 2rem;
 }

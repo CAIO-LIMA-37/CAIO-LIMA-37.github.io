@@ -1,0 +1,173 @@
+/* ==========================================================================
+   SITE ESTATÍSTICO - CAIO LIMA
+   --------------------------------------------------------------------------
+   ESTRUTURA:
+   1. Variáveis e Cores (A "Mente" do site)
+   2. Layout Global (A "Força Bruta" para expansão)
+   3. Componentes do Perfil (Card da esquerda e Texto da direita)
+   4. Tipografia e Blocos Internos (Grids e Notas)
+   5. Responsividade (Ajustes para Mobile)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIÁVEIS E CORES
+   Defina aqui as cores principais para trocar o tema rapidamente.
+   -------------------------------------------------------------------------- */
+:root {
+  --hero-bg: rgba(255, 255, 255, 0.03);
+  --hero-border: rgba(255, 255, 255, 0.08);
+  --hero-title: #f5f7fa;
+  --hero-text: #d7dbe0;
+  --hero-muted: #aeb8c2;
+  --hero-kicker: #7fb8ff; /* Azul dos destaques */
+  --hero-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+}
+
+/* Ajustes automáticos para quando o usuário trocar para o tema Claro */
+body.quarto-light {
+  --hero-bg: rgba(0, 0, 0, 0.025);
+  --hero-border: rgba(0, 0, 0, 0.10);
+  --hero-title: #1d2733;
+  --hero-text: #334155;
+  --hero-muted: #5b6775;
+  --hero-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   2. LAYOUT GLOBAL (CONTROLLING SPACE)
+   Aqui é onde forçamos o Quarto a usar toda a largura da tela.
+   -------------------------------------------------------------------------- */
+
+/* Remove as amarras do Bootstrap e expande o container principal */
+.container, .container-fluid, .quarto-container {
+    max-width: 98vw !important; /* vw = view width (porcentagem da largura da tela) */
+    width: 98vw !important;
+}
+
+/* Configura o grid principal da Home (Trestles) */
+.quarto-about-trestles {
+    display: grid !important;
+    grid-template-columns: 350px 1fr !important; /* Foto fixa em 350px, texto ocupa o resto (1fr) */
+    gap: 3rem !important;
+    max-width: 98% !important;
+    margin: 0 auto !important;
+    padding: 0 2rem;
+}
+
+/* Garante que o conteúdo não fique "espremido" no centro */
+#quarto-content.page-columns {
+    display: block !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. COMPONENTES DO PERFIL (COLUNA ESQUERDA)
+   Estilização da foto, botões e o card de identidade.
+   -------------------------------------------------------------------------- */
+
+.about-entity {
+  flex-direction: column;
+  align-items: center;
+  border-radius: 18px;
+  padding: 1.75rem;
+  background: var(--hero-bg);
+  border: 1px solid var(--hero-border);
+  box-shadow: var(--hero-shadow);
+  transition: transform 0.2s ease;
+}
+
+.about-entity:hover {
+  transform: translateY(-4px); /* Efeito de flutuar ao passar o mouse */
+}
+
+/* Foto do Perfil */
+.about-entity .about-image {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 10px;
+}
+
+/* Botões de links (Lab, E-mail, GitHub) */
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.2s ease;
+}
+
+.about-link:hover {
+  background: rgba(127, 184, 255, 0.15);
+  border-color: var(--hero-kicker);
+}
+
+/* --------------------------------------------------------------------------
+   4. TIPOGRAFIA E TEXTO (COLUNA DIREITA)
+   Estilo dos parágrafos, títulos e as caixas de áreas de pesquisa.
+   -------------------------------------------------------------------------- */
+
+.about-contents {
+  border-radius: 18px;
+  padding: 2rem 2.5rem;
+  background: var(--hero-bg);
+  border: 1px solid var(--hero-border);
+  box-shadow: var(--hero-shadow);
+}
+
+/* Título azul pequeno acima do "Researcher Profile" */
+.hero-kicker {
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hero-kicker) !important;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+/* Ajuste de leitura do texto principal */
+#hero-heading p {
+  line-height: 1.85;
+  text-align: justify;
+  color: var(--hero-text);
+}
+
+/* Grid de Research Areas e Research Questions */
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Divide em 2 colunas iguais */
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.hero-block {
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--hero-border);
+}
+
+/* Nota de rodapé (B.Sc. in Statistics...) */
+.hero-note {
+  font-size: 0.98rem;
+  color: var(--hero-muted);
+  border-left: 3px solid color-mix(in srgb, var(--hero-kicker) 55%, transparent);
+  padding-left: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. RESPONSIVIDADE (MOBILE)
+   Garante que o site não quebre em celulares.
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .quarto-about-trestles {
+    grid-template-columns: 1fr !important; /* Em telas pequenas, vira 1 coluna só */
+    padding: 1rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr; /* Áreas de pesquisa ficam uma embaixo da outra */
+  }
+}

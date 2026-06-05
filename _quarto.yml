@@ -1,117 +1,169 @@
+# =========================
+# Configuração geral do projeto Quarto
+# =========================
 project:
-  type: website
-  output-dir: docs
-  pre-render:  # This can be deleted if you are using the manually curated list of publications in publications.qmd
-    - python xlsx_to_yml.py  # Automatically generate publications.yml from publications.xlsx
-    
-# Meta
-description-meta: "Quarto Academic Website Template adapted by Dr. Gang He"
-author-meta: "Dr. Gang He"
+  type: website                 # Define que este projeto é um site
+  output-dir: docs              # Pasta onde o Quarto gera os arquivos HTML finais
+  pre-render:
+    - python xlsx_to_yml.py     # Executa este script antes do render para atualizar publications.yml
+  render:
+    - index.qmd
+    - about.qmd
+    - "!contact.qmd"
+    - 404.qmd
+    - "!people.qmd"
+    - "!posts.qmd"
+    - projects.qmd
+    - "!pub-listing.qmd"
+    - "!publications.qmd"
+    - "!teaching.qmd"
+# =========================
+# Metadados globais do site
+# =========================
+description-meta: "Caio Lima's personal academic website"
+author-meta: "Caio Lima"
 
 website:
-  title: "Quarto Academic"
-  image: "https://quarto.org/quarto.png"
-  description: "Quarto Academic Website Template adapted by Dr. Gang He"
- 
+  title: "Caio Lima"   # Nome principal exibido no topo do site e na aba do navegador
+  image: files/profiles/quarto.JPG   # Imagem padrão usada em previews do site (ex.: compartilhamento em redes sociais)
+  description: "Researcher in Statistics, Machine Learning, and Generative Modeling"  # Descrição curta do site para metadados e buscadores
+
   navbar:
-    background: light  # You can change the background color here
+    background: light   # Cor de fundo da barra superior de navegação
 
-    left:   # You can comment out all navigation items here if you just like to keep the index page only
-#      - text: Home
-#        href: index.qmd
-      - text: About
-        menu:
-          - text: News
-            href: posts.qmd#category=news
-          - text: Events
-            href: posts.qmd#category=event      
-          - text: Contact
-            href: contact.qmd             
-      - text: Research
-        menu:
-          - text: Publications Listing  # Automatically generated from publications.xlsx
-            href: pub-listing.qmd
-          - text: Publications  # Manually curated list of publications
-            href: publications.qmd            
-          - text: Selected Papers
-            href: posts.qmd#category=paper
-          - text: Grants
-            href: projects.qmd                                
-      - text: Teaching # Comment the Teaching part out to remove the Teaching page
-        href: teaching.qmd
-      - text: Outreach
-        menu:        
-        - text: Presentations
-          href: posts.qmd#category=presentation                   
-      - text: Group   # Comment the Group part out to remove the Group page
-        href: people.qmd
+    left:
+      - text: Home      # Link para a página inicial do site
+        href: index.qmd
 
-    right: 
-      - text: CV
-        href: files/nsf-biosketch.pdf
+      - text: About     # Página com apresentação pessoal, trajetória e interesses
+        href: about.qmd
+
+      - text: Projects  # Página com projetos de pesquisa, código e aplicações
+        href: projects.qmd
+
+#      - text: Publications   # Página com lista de publicações
+#        href: pub-listing.qmd
+
+#      - text: Contact   # Página com formas de contato e links externos
+#        href: contact.qmd
+
+    right:
+#      - text: CV        # Link para o currículo em PDF
+#        href: files/nsf-biosketch.pdf
+
+      - icon: github    # Ícone do GitHub com link para o seu perfil
+        href: https://github.com/CAIO-LIMA-37
+        target: _blank
+
+  
+    page-navigation: true
+  # Ativa a navegação entre páginas quando fizer sentido.
+  # Em sites com várias páginas, isso ajuda o visitante a se localizar melhor.
+
+  page-footer:
+    left: "Caio Lima © <script>document.write(new Date().getFullYear())</script>"
+    # Texto exibido no lado esquerdo do rodapé.
+    # Aqui usamos JavaScript para mostrar automaticamente o ano atual.
+    # Você pode trocar esse texto depois por nome + afiliação, se quiser.
+
+    right:
       - icon: github
-        href: https://github.com/drganghe/quarto-academic-website-template
+        href: https://github.com/CAIO-LIMA-37
         target: _blank
-      - text: "{{< fa brands bluesky >}}"
-        href: https://bsky.app
-        target: _blank      
-      - icon: rss
-        href: posts.xml
-        target: _blank
-  
-  page-navigation: true
-  
-  page-footer: 
-    left: "[Your Name](http://www.github.com) &copy; <script>document.write(new Date().getFullYear())</script>" 
-    center: "Build on [Quarto Academic Website Template](https://github.com/drganghe/quarto-academic-website-template) adapted by [Dr. Gang He](http://drganghe.github.io)"
-    right:  
-      - icon: github
-        href: https://github.com/drganghe/quarto-academic-website-template
-        target: _blank
-      - text: "{{< fa brands bluesky >}}" 
-        href: https://bsky.app
-        target: _blank
-      - icon: rss
-        href: posts.xml
-        target: _blank  
-  
+    # Itens exibidos no lado direito do rodapé.
+    # Neste começo, vale manter só o GitHub para deixar o rodapé limpo e profissional.
+    # O target _blank faz o link abrir em nova aba.
+
   search:
     location: navbar
     type: textbox
-  
-  reader-mode: true
+  # Configuração da busca interna do site.
+  # location: navbar -> coloca a busca na barra superior.
+  # type: textbox -> mostra uma caixa de texto visível; se quiser algo mais discreto, depois pode trocar para overlay.
 
-  draft-mode: unlinked
-  
-  repo-url: https://github.com/drganghe/quarto-academic-website-template
-#  repo-actions: [edit, issue, source]
-  
   open-graph: true
-  
-  twitter-card: true 
-#  card-style: summary      
-  
-  site-url: "https://drganghe.github.io/quarto-academic-website-template"
-  
-  google-analytics:
-    tracking-id: ""  # Please delete or replace with your own tracking ID
-    anonymize-ip: true 
+  # Gera metadados Open Graph.
+  # Isso melhora a aparência do link do seu site quando ele é compartilhado em redes sociais e apps de mensagem.
 
-bibliography: references.bib  # Add references.bib to the root folder to enable the bibliography function
+  twitter-card: true
+  # Gera metadados de Twitter Card.
+  # Mesmo que você não use Twitter/X, isso ainda ajuda alguns serviços a montar previews melhores.
+
+  site-url: "https://caio-lima-37.github.io"
+  # URL principal do seu site publicado.
+  # Isso é importante para metadados, previews e links canônicos.
+  # Ajuste se no futuro você usar um domínio próprio.
+
+bibliography: references.bib
+# Arquivo de referências bibliográficas do projeto.
+# Só mantenha esta linha se você for usar citações com @chave em páginas Quarto.
+# Se não for usar agora, pode comentar ou remover temporariamente.
+
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
-    toc: true
-    footnotes-hover: true
-    code-copy: true
-    code-link: true
-    code-overflow: wrap
-    fig-align: center
-    link-external-icon: false
-    link-external-newwindow: true
-    email-obfuscation: javascript
-    link-external-filter: '^(?:http:|https:)\/\/drganghe\.github\.io\/custom'
-    include-in-header: "files/includes/_academic.qmd"
+    theme:
+      dark: cyborg
+      light: flatly
+    # Tema visual base do site em HTML.
+    # cyborg é mais forte e mais “tech” para começar.
+    # Depois você pode trocar por outro tema ou manter este e personalizar no CSS.
 
+    css: 
+      - styles.css
+      - custom.css
+    # Arquivo CSS customizado do site.
+    # É aqui que você ajusta aparência fina, como cores, fontes, margens, espaçamentos e detalhes visuais.
+
+    toc: true
+    # Ativa o sumário automático nas páginas.
+    # Funciona melhor em páginas com várias seções, como About, Projects ou Publications.
+
+    footnotes-hover: true
+    # Faz notas de rodapé aparecerem em hover (ao passar o mouse).
+    # Isso melhora a leitura, pois evita que o visitante precise ir até o final da página para ver a nota.
+
+    code-copy: true
+    # Adiciona botão para copiar blocos de código.
+    # Útil se você pretende mostrar scripts, snippets ou exemplos técnicos no site.
+
+    code-link: true
+    # Tenta transformar funções em blocos de código em links para documentação online.
+    # Isso é útil em páginas com código, mas tem mais efeito em contextos compatíveis com knitr/downlit.
+    # Pode ser mantido documentado mesmo que você ainda não use tanto agora.
+
+    code-overflow: wrap
+    # Faz linhas longas de código quebrarem automaticamente.
+    # Isso evita rolagem horizontal excessiva em telas menores.
+
+    fig-align: center
+    # Centraliza imagens e figuras por padrão.
+    # É uma escolha visual segura e geralmente deixa o layout mais equilibrado.
+
+    link-external-icon: false
+    # Controla se links externos mostram um ícone visual ao lado.
+    # false = aparência mais limpa; true = deixa explícito que o link leva para fora do site.
+
+    link-external-newwindow: true
+    # Faz links externos abrirem em nova aba.
+    # Isso evita que a pessoa saia do seu site ao clicar em links externos.
+
+    email-obfuscation: javascript
+    # Tenta ofuscar endereços de e-mail no HTML para dificultar coleta automática por bots.
+    # É útil se você mostrar e-mail em alguma página de contato.
+
+    link-external-filter: '^(?:http:|https:)\/\/drganghe\.github\.io\/custom'
+    # Esta opção usa uma expressão regular (regex) para dizer ao Quarto que certos links,
+    # mesmo começando com http/https, devem ser tratados como "internos" e não como externos.
+    # No template original, isso fazia sentido para links de um domínio específico do autor.
+    # Como ainda está apontando para o site do autor original, o ideal é deixar comentado
+    # até você ter um caso real para usar essa opção no seu próprio domínio.
+
+    include-in-header: 
+      - file: files/includes/_academic.qmd
+    # Inclui o conteúdo deste arquivo no cabeçalho HTML (<head>) de todas as páginas do site.
+    # Essa opção é usada para injetar CSS, JavaScript, meta tags ou outros trechos especiais.
+    # No template original, isso servia para adicionar componentes acadêmicos compartilhados.
+    # Como includes avançados podem gerar efeitos colaterais ou dificultar o debug,
+    # o mais seguro neste começo é deixar comentado e reativar só quando você souber exatamente por que precisa.
+      - file: includes/translator.html

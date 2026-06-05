@@ -1,0 +1,54 @@
+---
+title: "About"
+about:
+  template: trestles
+  image: profile.jpg
+  image-width: 65%
+  links:
+    - icon: envelope
+      text: E-mail
+      href: mailto:pedro.canavieira@icen.ufpa.br
+    - icon: github
+      text: GitHub
+      href: https://github.com/CAIO-LIMA-37
+      target: _blank
+---
+
+## Caio Lima
+
+I am a Statistics student and researcher focused on the mathematical foundations of Machine Learning, Statistical Inference, and Generative Modeling.
+
+My work is driven by a fundamental question: **how can intelligent systems be understood, constructed, and interpreted through rigorous mathematical structures?**
+
+I am particularly interested in probability theory, stochastic processes, and the theoretical mechanisms underlying neural networks and large language models. Rather than treating models as black boxes, I aim to derive and analyze them from first principles — understanding their behavior, limitations, and expressive power.
+
+---
+
+### Research Vision
+
+My long-term goal is to contribute to the development of **interpretable and theoretically grounded artificial intelligence**, bridging the gap between statistical theory and modern machine learning systems.
+
+I am currently exploring:
+
+- Probabilistic modeling and statistical inference  
+- Generative models and latent variable methods  
+- Neural networks from a mathematical perspective  
+- Natural Language Processing (NLP) and Large Language Models (LLMs)  
+- Scientific computing and document systems (LaTeX, structured knowledge)  
+
+---
+
+### Background
+
+- Bachelor's Degree in Statistics — Federal University of Pará (in progress)  
+- Undergraduate researcher (PIBIC) in Artificial Intelligence and Statistical Modeling  
+
+---
+
+### Personal Note
+
+Beyond formal research, I am deeply interested in developing a visual and intuitive understanding of mathematics — combining abstraction, structure, and interpretation.
+
+I see mathematics not only as a tool, but as a language capable of expressing complex systems, intelligence, and patterns in their purest form.
+
+---

@@ -1,1 +1,349 @@
-/* css styles */
+/* ==========================================================================
+   ESTILOS PRINCIPAIS DO SITE
+   --------------------------------------------------------------------------
+   Este arquivo concentra o layout e a aparência estrutural das páginas,
+   principalmente da home/about usando o template "trestles" do Quarto.
+   ========================================================================== */
+
+/* ===== ABOUT / HERO SECTION ===== */
+
+body.quarto-light #hero-heading .hero-kicker,
+body.quarto-dark #hero-heading .hero-kicker,
+body.quarto-light #hero-heading .hero-kicker * ,
+body.quarto-dark #hero-heading .hero-kicker * {
+  color: #7fb8ff !important;
+}
+
+
+/* 1. Força o container principal a usar a tela toda */
+.quarto-about-trestles {
+  max-width: 98% !important; /* Quase a tela cheia */
+  margin: 0 auto !important;
+  display: flex !important;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+/* 2. Ajusta a coluna da esquerda (Imagem/Links) */
+.about-entity {
+  flex: 0 0 320px !important; /* Largura fixa para a foto não esticar */
+  max-width: 320px !important;
+  background: var(--hero-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.75rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+/* Caixa da esquerda: imagem + nome + links */
+.about-entity > div:first-child,
+.about-entity > .about-image,
+.about-entity > header {
+  justify-self: start;
+}
+
+.about-entity:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.34);
+  border-color: rgba(46, 164, 255, 0.25);
+}
+
+/* Foto principal */
+.about-entity .about-image {
+  width: 100%;
+  max-width: 280px;
+  justify-self: start;
+  margin-left: 0;
+}
+
+/* Nome abaixo da foto */
+.about-entity .title {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Área dos botões/links */
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 0.5rem;
+}
+
+/* Botões de link */
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.about-link:hover {
+  background: rgba(46, 164, 255, 0.12);
+  border-color: rgba(46, 164, 255, 0.35);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.about-contents {
+  flex: 1 !important; /* Faz o texto "empurrar" e ocupar todo o resto */
+  max-width: 100% !important; 
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.about-contents:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.30);
+  border-color: rgba(46, 164, 255, 0.25);
+}
+
+
+/* Parágrafos da seção principal */
+
+#hero-heading {
+  width: 100%;
+}
+
+.hero-kicker {
+  margin-bottom: 0.9rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7fb8ff !important;
+  font-weight: 700;
+}
+
+#hero-heading p {
+  max-width: 100%;
+  line-height: 1.85;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+#hero-heading li {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+/* Títulos internos */
+
+#hero-heading h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 3.2vw, 3.25rem);
+  line-height: 1.1;
+  color: #f5f7fa;
+  max-width: 14ch;
+}
+
+#hero-heading > p {
+  font-size: 1.08rem;
+  line-height: 1.9;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  color: #d7dbe0;
+  margin-bottom: 1.15rem;
+}
+
+
+#hero-heading h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+  color: #f3f5f7;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-block {
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.025);
+}
+
+/* Listas */
+.hero-block ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+#hero-heading p {
+  margin-bottom: 1.1rem;
+  line-height: 1.85;
+}
+
+.hero-block li {
+  margin-bottom: 0.45rem;
+  text-align: left;
+}
+
+.hero-note {
+  font-size: 0.98rem;
+  color: #aeb8c2;
+  border-left: 3px solid rgba(127, 184, 255, 0.45);
+  padding-left: 0.9rem;
+  margin-top: 1rem;
+}
+
+.hero-section-title {
+  text-align: center;
+  color: #fbfdff;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.36),
+    0 0 18px rgba(255, 255, 255, 0.16);
+}
+
+.hero-subsection-title {
+  text-align: center;
+  color: #f5f9ff;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.28),
+    0 0 12px rgba(255, 255, 255, 0.10);
+}
+
+/* Rodapé mais discreto
+.footer {
+  opacity: 0.9;
+}*/
+
+/* ===== AJUSTES RESPONSIVOS ===== */
+
+@media (max-width: 991px) {
+  .quarto-about-trestles {
+    padding: 1.5rem 1rem;
+  }
+
+  .about-entity {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .about-entity .about-image {
+    max-width: 240px;
+  }
+
+  #hero-heading p {
+    font-size: 1rem;
+  }
+
+    .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #hero-heading h1 {
+    max-width: none;
+  }
+}
+
+/* ===== TEMA CLARO / ESCURO ===== */
+
+:root {
+  --hero-bg: rgba(255, 255, 255, 0.03);
+  --hero-border: rgba(255, 255, 255, 0.08);
+  --hero-title: #f5f7fa;
+  --hero-text: #d7dbe0;
+  --hero-muted: #aeb8c2;
+  --hero-kicker: #7fb8ff;
+  --hero-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+}
+
+body.quarto-light {
+  --hero-bg: rgba(0, 0, 0, 0.025);
+  --hero-border: rgba(0, 0, 0, 0.10);
+  --hero-title: #1d2733;
+  --hero-text: #334155;
+  --hero-muted: #5b6775;
+  --hero-kicker: #7fb8ff;
+  --hero-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+body.quarto-dark {
+  --hero-bg: rgba(255, 255, 255, 0.03);
+  --hero-border: rgba(255, 255, 255, 0.08);
+  --hero-title: #f5f7fa;
+  --hero-text: #d7dbe0;
+  --hero-muted: #aeb8c2;
+  --hero-kicker: #7fb8ff;
+  --hero-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+}
+
+.about-entity,
+.about-contents,
+.hero-block {
+  background: var(--hero-bg);
+  border: 1px solid var(--hero-border);
+  box-shadow: var(--hero-shadow);
+}
+
+.hero-kicker {
+  color: var(--hero-kicker);
+}
+
+#hero-heading h1,
+#hero-heading h2,
+.hero-section-title,
+.hero-subsection-title,
+.about-entity .title {
+  color: var(--hero-title);
+}
+
+#hero-heading p,
+#hero-heading > p,
+#hero-heading li,
+.hero-block li {
+  color: var(--hero-text);
+}
+
+.hero-note {
+  color: var(--hero-muted);
+  border-left: 3px solid color-mix(in srgb, var(--hero-kicker) 55%, transparent);
+}
+
+/* Força o container do Bootstrap a ocupar a tela toda */
+.container, .container-fluid, .quarto-container {
+    max-width: 98vw !important; /* vw = view width (largura da tela) */
+    width: 98vw !important;
+}
+
+/* Alvo específico para o layout Trestles */
+.quarto-about-trestles {
+    grid-template-columns: 350px 1fr !important; /* Define largura fixa para foto e 'o resto' para texto */
+    display: grid !important;
+    gap: 3rem !important;
+}
+
+/* Remove qualquer margem automática que centraliza o conteúdo */
+#quarto-content.page-columns {
+    display: block !important;
+}

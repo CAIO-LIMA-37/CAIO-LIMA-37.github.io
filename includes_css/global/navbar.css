@@ -1,0 +1,35 @@
+.navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#quarto-search .aa-DetachedSearchButton,
+#quarto-search .aa-Autocomplete,
+#quarto-search input {
+  border-radius: 10px;
+}
+
+/* Wrapper do botão de troca de tema */
+.quarto-color-scheme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-left: 1.9rem !important;
+}
+
+/* Ícone visual ao lado do botão */
+.quarto-color-scheme-toggle::before {
+  content: "☀️";
+  position: absolute;
+  left: 0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+/* Quando estiver em modo escuro, troca o ícone */
+body.quarto-dark .quarto-color-scheme-toggle::before {
+  content: "🌙";
+}

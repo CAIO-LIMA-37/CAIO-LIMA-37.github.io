@@ -9,7 +9,7 @@
 <meta name="author" content="Caio Lima">
 <meta name="description" content="Caio Lima’s personal academic website">
 
-<title>Projects – Caio Lima</title>
+<title>Projetos Acadêmicos e Pessoais – Caio Lima</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,20 +74,48 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-projects .list');
+    const listingTargetEl = window.document.querySelector('#listing-projetos-academicos .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-author','listing-subtitle','listing-description','listing-funding','listing-started','listing-ended',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-institution','listing-description','listing-status','listing-ano',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-image","listing-title","listing-author","listing-subtitle","listing-description","listing-started","listing-ended","listing-funding"],
+      searchColumns: ["listing-title","listing-institution","listing-description","listing-status","listing-ano","listing-image"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
+    window['quarto-listings']['listing-projetos-academicos'] = new List('listing-projetos-academicos', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-projetos-pessoais .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-stack','listing-description','listing-status','listing-ano',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-title","listing-stack","listing-description","listing-status","listing-ano","listing-image"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-projetos-pessoais'] = new List('listing-projetos-pessoais', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -199,13 +227,13 @@ body.quarto-light .goog-te-gadget .goog-te-combo {
 
 
 
-<meta property="og:title" content="Projects – Caio Lima">
-<meta property="og:description" content="Funded projects">
-<meta property="og:image" content="https://nsf-gov-resources.nsf.gov/styles/featured_content_tablet/s3/2023-10/NSF_Official_logo_Med_Res_600ppi_rectangle.png">
+<meta property="og:title" content="Projetos Acadêmicos e Pessoais – Caio Lima">
+<meta property="og:description" content="Researcher in Statistics, Machine Learning, and Generative Modeling">
+<meta property="og:image" content="https://caio-lima-37.github.io/files/profiles/quarto.JPG">
 <meta property="og:site_name" content="Caio Lima">
-<meta name="twitter:title" content="Projects – Caio Lima">
-<meta name="twitter:description" content="Funded projects">
-<meta name="twitter:image" content="https://nsf-gov-resources.nsf.gov/styles/featured_content_tablet/s3/2023-10/NSF_Official_logo_Med_Res_600ppi_rectangle.png">
+<meta name="twitter:title" content="Projetos Acadêmicos e Pessoais – Caio Lima">
+<meta name="twitter:description" content="Researcher in Statistics, Machine Learning, and Generative Modeling">
+<meta name="twitter:image" content="https://caio-lima-37.github.io/files/profiles/quarto.JPG">
 <meta name="twitter:card" content="summary_large_image">
 </head><body class="nav-fixed"><div class="translate-box">
 
@@ -352,8 +380,15 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="includes_css/global/theme.css">
+<link rel="stylesheet" href="includes_css/global/base.css">
+<link rel="stylesheet" href="includes_css/global/navbar.css">
+<link rel="stylesheet" href="includes_css/global/utilities.css">
+<link rel="stylesheet" href="includes_css/components/cards.css">
+<link rel="stylesheet" href="includes_css/components/badges.css">
+<link rel="stylesheet" href="includes_css/components/hero.css">
+<link rel="stylesheet" href="includes_css/components/translate.css">
+<link rel="stylesheet" href="includes_css/pages/home.css">
 
 
 
@@ -404,16 +439,13 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
-<p class="subtitle lead">Funded projects</p>
+<h1 class="title">Projetos Acadêmicos e Pessoais</h1>
 </div>
 
 
@@ -430,35 +462,33 @@ window.Quarto = {
 </header>
 
 
-<div id="listing-projects" class="quarto-listing quarto-listing-container-table">
+<p>Nesta página, reuni projetos que representam minha trajetória em formação: alguns ligados à universidade e à pesquisa, outros desenvolvidos por iniciativa própria para estudo, portfólio e experimentação.</p>
+<section id="projetos-acadêmicos" class="level2">
+<h2 class="anchored" data-anchor-id="projetos-acadêmicos">Projetos acadêmicos</h2>
+<p>Aqui estão projetos vinculados à universidade, à pesquisa, à iniciação científica e a outras atividades acadêmicas.</p>
+<div id="listing-projetos-academicos" class="quarto-listing quarto-listing-container-table">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-projects-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-projects'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+     <select id="listing-projetos-academicos-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-projetos-academicos'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
-         <option value="listing-image" data-direction="asc">
-        </option>
          <option value="listing-title-sort" data-direction="asc">
-          Title
+          Projeto
         </option>
-         <option value="listing-author" data-direction="asc">
-          Team
-        </option>
-         <option value="listing-subtitle" data-direction="asc">
-          Funder
+         <option value="listing-institution" data-direction="asc">
+          Instituição / contexto
         </option>
          <option value="listing-description" data-direction="asc">
-          Description
+          Descrição
         </option>
-         <option value="listing-started" data-direction="asc">
-          Start
+         <option value="listing-status" data-direction="asc">
+          Status
         </option>
-         <option value="listing-ended" data-direction="asc">
-          End
+         <option value="listing-ano" data-direction="asc">
+          Ano
         </option>
-         <option value="listing-funding" data-direction="asc">
-          Funding
+         <option value="listing-image" data-direction="asc">
         </option>
      </select>
   </div>
@@ -474,53 +504,61 @@ window.Quarto = {
 <a class="sort" data-sort="listing-image" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;"> </a>
 </th>
 <th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Projeto</a>
 </th>
 <th>
-<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Team</a>
+<a class="sort" data-sort="listing-institution" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Instituição / contexto</a>
 </th>
 <th>
-<a class="sort" data-sort="listing-subtitle" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Funder</a>
+<a class="sort" data-sort="listing-description" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Descrição</a>
 </th>
 <th>
-<a class="sort" data-sort="listing-description" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Description</a>
+<a class="sort" data-sort="listing-status" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Status</a>
 </th>
 <th>
-<a class="sort" data-sort="listing-funding" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Funding</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-started" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Start</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-ended" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">End</a>
+<a class="sort" data-sort="listing-ano" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Ano</a>
 </th>
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-listing-title-sort="Exploring ">
+<tr data-index="0" data-listing-title-sort="Título do projeto acadêmico">
 <td>
-<span class="listing-image"><img loading="lazy" src="https://nsf-gov-resources.nsf.gov/styles/featured_content_tablet/s3/2023-10/NSF_Official_logo_Med_Res_600ppi_rectangle.png" style="height: 30px;"></span>
+<span class="listing-image"><img loading="lazy" src="https://via.placeholder.com/120x80?text=UFPA" style="height: 40px;"></span>
 </td>
 <td>
-<a href="https://www.nsf.gov/" class="title listing-title">Exploring </a>
+<a href="#" class="title listing-title">Título do projeto acadêmico</a>
 </td>
 <td>
-<span class="listing-author">Academic Website</span>
+<span class="listing-institution">UFPA · Iniciação Científica</span>
 </td>
 <td>
-<span class="listing-subtitle">Funder</span>
+<span class="listing-description">Breve descrição do objetivo do projeto, métodos utilizados e foco principal.</span>
 </td>
 <td>
-<span class="listing-description">The goal of this project is to investigate .</span>
+<span class="listing-status">Em andamento</span>
 </td>
 <td>
-<span class="listing-funding">$0</span>
+<span class="listing-ano">2025</span>
+</td>
+</tr>
+<tr data-index="1" data-listing-title-sort="Dashboard para análise estatística">
+<td>
+<span class="listing-image"><img loading="lazy" src="https://via.placeholder.com/120x80?text=Projeto" style="height: 40px;"></span>
 </td>
 <td>
-<span class="listing-started">2024</span>
+<a href="#" class="title listing-title">Dashboard para análise estatística</a>
 </td>
 <td>
-<span class="listing-ended">2025</span>
+<span class="listing-institution">UFPA · Projeto de pesquisa</span>
+</td>
+<td>
+<span class="listing-description">Desenvolvimento de visualizações e organização de dados para apoio a análises acadêmicas.</span>
+</td>
+<td>
+<span class="listing-status">Concluído</span>
+</td>
+<td>
+<span class="listing-ano">2024</span>
 </td>
 </tr>
 </tbody>
@@ -529,19 +567,115 @@ window.Quarto = {
 No matching items
 </div>
 </div>
-<!--Include social share buttons-->
-<!-- 
-AddToAny check more: https://www.addtoany.com/buttons/for/website 
-Using includes will make edits easier, will only need to add or remove button here if needed.
-https://quarto.org/docs/authoring/includes.html
--->
-<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-<p><a class="a2a_dd" href="https://www.addtoany.com/share"></a> <a class="a2a_button_linkedin"></a> <a class="a2a_button_bluesky"></a> <a class="a2a_button_facebook"></a> <a class="a2a_button_copy_link"></a> <a class="a2a_button_email"></a></p>
+</section>
+<section id="projetos-pessoais" class="level2">
+<h2 class="anchored" data-anchor-id="projetos-pessoais">Projetos pessoais</h2>
+<p>Aqui estão projetos independentes, voltados a prática, exploração técnica, visualização, automação e desenvolvimento do meu portfólio.</p>
+<div id="listing-projetos-pessoais" class="quarto-listing quarto-listing-container-table">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-projetos-pessoais-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-projetos-pessoais'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title-sort" data-direction="asc">
+          Projeto
+        </option>
+         <option value="listing-stack" data-direction="asc">
+          Tecnologias
+        </option>
+         <option value="listing-description" data-direction="asc">
+          Descrição
+        </option>
+         <option value="listing-status" data-direction="asc">
+          Status
+        </option>
+         <option value="listing-ano" data-direction="asc">
+          Ano
+        </option>
+         <option value="listing-image" data-direction="asc">
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<script async="" src="https://static.addtoany.com/menu/page.js"></script>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+<a class="sort" data-sort="listing-image" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;"> </a>
+</th>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Projeto</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-stack" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Tecnologias</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-description" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Descrição</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-status" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Status</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-ano" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Ano</a>
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-title-sort="Meu website acadêmico">
+<td>
+<span class="listing-image"><img loading="lazy" src="https://via.placeholder.com/120x80?text=Site" style="height: 40px;"></span>
+</td>
+<td>
+<a href="#" class="title listing-title">Meu website acadêmico</a>
+</td>
+<td>
+<span class="listing-stack">Quarto, CSS, HTML</span>
+</td>
+<td>
+<span class="listing-description">Desenvolvimento e customização do meu site pessoal com foco acadêmico, visual limpo e organização de conteúdo.</span>
+</td>
+<td>
+<span class="listing-status">Em andamento</span>
+</td>
+<td>
+<span class="listing-ano">2025</span>
+</td>
+</tr>
+<tr data-index="1" data-listing-title-sort="Projeto de automação em Python">
+<td>
+<span class="listing-image"><img loading="lazy" src="https://via.placeholder.com/120x80?text=Python" style="height: 40px;"></span>
+</td>
+<td>
+<a href="#" class="title listing-title">Projeto de automação em Python</a>
+</td>
+<td>
+<span class="listing-stack">Python</span>
+</td>
+<td>
+<span class="listing-description">Automação de tarefas e organização de fluxo de trabalho para atividades repetitivas.</span>
+</td>
+<td>
+<span class="listing-status">Concluído</span>
+</td>
+<td>
+<span class="listing-ano">2024</span>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

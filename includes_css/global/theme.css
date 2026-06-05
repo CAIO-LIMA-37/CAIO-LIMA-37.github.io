@@ -1,0 +1,73 @@
+:root {
+  --hero-bg: rgba(255, 255, 255, 0.03);
+  --hero-border: rgba(255, 255, 255, 0.08);
+  --hero-title: #f5f7fa;
+  --hero-text: #d7dbe0;
+  --hero-muted: #aeb8c2;
+  --hero-kicker: #7fb8ff;
+  --hero-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+  --hero-title-glow:
+    0 0 4px rgba(255, 255, 255, 0.55),
+    0 0 10px rgba(255, 255, 255, 0.35),
+    0 0 18px rgba(255, 255, 255, 0.18);
+}
+
+body.quarto-light {
+  --hero-bg: rgba(0, 0, 0, 0.025);
+  --hero-border: rgba(0, 0, 0, 0.10);
+  --hero-title: #1d2733;
+  --hero-text: #334155;
+  --hero-muted: #5b6775;
+  --hero-kicker: #7fb8ff;
+  --hero-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  --hero-title-glow:
+    0 0 2px rgba(0, 0, 0, 0.35),
+    0 0 6px rgba(0, 0, 0, 0.22),
+    0 0 12px rgba(0, 0, 0, 0.10);
+}
+
+body.quarto-dark {
+  --hero-bg: rgba(255, 255, 255, 0.03);
+  --hero-border: rgba(255, 255, 255, 0.08);
+  --hero-title: #f5f7fa;
+  --hero-text: #d7dbe0;
+  --hero-muted: #aeb8c2;
+  --hero-kicker: #7fb8ff;
+  --hero-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+  --hero-title-glow:
+    0 0 4px rgba(255, 255, 255, 0.55),
+    0 0 10px rgba(255, 255, 255, 0.35),
+    0 0 18px rgba(255, 255, 255, 0.18);
+}
+
+.about-entity,
+.about-contents,
+.hero-block {
+  background: var(--hero-bg);
+  border: 1px solid var(--hero-border);
+  box-shadow: var(--hero-shadow);
+}
+
+.hero-kicker {
+  color: var(--hero-kicker);
+}
+
+#hero-heading h1,
+#hero-heading h2,
+.hero-section-title,
+.hero-subsection-title,
+.about-entity .title {
+  color: var(--hero-title);
+}
+
+#hero-heading p,
+#hero-heading > p,
+#hero-heading li,
+.hero-block li {
+  color: var(--hero-text);
+}
+
+.hero-note {
+  color: var(--hero-muted);
+  border-left: 3px solid color-mix(in srgb, var(--hero-kicker) 55%, transparent);
+}

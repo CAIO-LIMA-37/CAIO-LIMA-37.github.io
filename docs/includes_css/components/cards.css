@@ -1,0 +1,27 @@
+.about-contact-card {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  width: 100%;
+  max-width: 280px;
+  border: 1px solid var(--hero-border);
+  border-radius: 14px;
+  background: var(--hero-bg);
+  color: var(--hero-text);
+  text-align: center;
+  line-height: 1.6;
+  box-shadow: var(--hero-shadow);
+}
+
+.about-contact-card .contact-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--hero-title);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.about-contact-card .contact-email {
+  color: var(--hero-text);
+  user-select: text;
+  word-break: break-word;
+}

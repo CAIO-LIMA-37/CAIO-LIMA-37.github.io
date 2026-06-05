@@ -4,6 +4,9 @@
 title: "Publications"
 description-meta: "Information, PDFs, and social metrics of papers"
 title-block-banner: false
+page-layout: article
+# Usa largura total da página.
+# Isso ajuda a criar uma home mais visual e com aparência de site profissional.
 listing:
   - id: selected-work
     contents: publications.yml

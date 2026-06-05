@@ -159,21 +159,100 @@ While my primary orientation is theoretical, I also develop and implement models
 
 - Can the estimated parameters of a LLM be interpreted for tasks applied in reality?
 
-- Can we measure the event known as "Hallucination" in an LLM?
-
 - Is current probability theory sufficient to provide an axiomatic basis for generative models?  
 
 :::
 :::
 
-::: {.hero-note}
-B.Sc. in Statistics (in progress) | Federal University of Pará (UFPA)
+```{=html}
+<div class="hero-note hero-skills-card">
+  <h3 class="hero-section-title">Academic background</h3>
+  <div class="hero-skills-card">
+    <div class="hero-academic-list">
+      <div class="hero-academic-card">
+        <div class="hero-academic-logo">
+          <img src="https://ascom.ufpa.br/images/Brasao/brasao%20UFPA.jpg" alt="UFPA logo">
+        </div>
+        <div class="hero-academic-info">
+          <div class="hero-academic-label">Current degree</div>
+          <div class="hero-academic-title">B.Sc. in Statistics</div>
+          <div class="hero-academic-meta">
+          Federal University of Pará (UFPA) | 2023 - In progress
+          </div>
+        </div>
+      </div>
 
-![Python](https://img.shields.io/badge/Python-3670A0?style=flat&logo=python)
-![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r)
-![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c)
-![SQL](https://img.shields.io/badge/SQL-003B57?style=flat)
-:::
+      <!-- Future degrees go here -->
+      <!--
+      <div class="hero-academic-card">
+        <div class="hero-academic-logo">
+          <img src="URL_HERE" alt="Institution logo">
+        </div>
+        <div class="hero-academic-info">
+          <div class="hero-academic-label">Future degree</div>
+          <div class="hero-academic-title">M.Sc. in ...</div>
+          <div class="hero-academic-meta">
+            University Name | 202X - 202X
+          </div>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+
+  <h3 class="hero-section-title">Languages &amp; tools i work with</h3>
+
+  <div class="hero-skills-grid">
+    <div class="hero-skill-item">
+      <img src="https://cdn.simpleicons.org/python" alt="Python logo">
+      <div>
+        <strong>Python</strong>
+        <span>Data analysis, automation, scientific computing, and machine learning workflows.</span>
+      </div>
+    </div>
+
+    <div class="hero-skill-item">
+      <img src="https://cdn.simpleicons.org/r" alt="R logo">
+      <div>
+        <strong>R</strong>
+        <span>Statistical modeling, visualization, reproducible research, and academic analysis.</span>
+      </div>
+    </div>
+
+    <div class="hero-skill-item">
+      <img src="https://cdn.simpleicons.org/c" alt="C logo">
+      <div>
+        <strong>C</strong>
+        <span>Programming foundations, logic, memory handling, and structured problem-solving.</span>
+      </div>
+    </div>
+
+    <div class="hero-skill-item">
+      <img src="https://cdn.simpleicons.org/mysql" alt="SQL logo">
+      <div>
+        <strong>SQL</strong>
+        <span>Querying, cleaning, transforming, and organizing relational data efficiently.</span>
+      </div>
+    </div>
+
+    <div class="hero-skill-item">
+      <img src="https://cdn.simpleicons.org/quarto" alt="Quarto logo">
+      <div>
+        <strong>Quarto</strong>
+        <span>Technical publishing, reproducible documents, academic websites, and polished reports.</span>
+      </div>
+    </div>
+
+    <div class="hero-skill-item">
+      <img src="https://cdn.simpleicons.org/latex" alt="LaTeX logo">
+      <div>
+        <strong>LaTeX</strong>
+        <span>Scientific writing, mathematical notation, structured documents, and publication-ready formatting.</span>
+      </div>
+    </div>
+  </div>
+</div>
+```
 
 :::
 

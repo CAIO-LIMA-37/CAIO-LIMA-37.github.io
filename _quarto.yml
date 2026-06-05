@@ -110,8 +110,15 @@ format:
     # Depois você pode trocar por outro tema ou manter este e personalizar no CSS.
 
     css: 
-      - styles.css
-      - custom.css
+      - includes_css/global/theme.css
+      - includes_css/global/base.css
+      - includes_css/global/navbar.css
+      - includes_css/global/utilities.css
+      - includes_css/components/cards.css
+      - includes_css/components/badges.css
+      - includes_css/components/hero.css
+      - includes_css/components/translate.css
+      - includes_css/pages/home.css
     # Arquivo CSS customizado do site.
     # É aqui que você ajusta aparência fina, como cores, fontes, margens, espaçamentos e detalhes visuais.
 
@@ -166,6 +173,6 @@ format:
     # No template original, isso servia para adicionar componentes acadêmicos compartilhados.
     # Como includes avançados podem gerar efeitos colaterais ou dificultar o debug,
     # o mais seguro neste começo é deixar comentado e reativar só quando você souber exatamente por que precisa.
-      - file: includes/translator.html
+      - file: includes_html/translator.html
 
-      - file: includes/about-contact.html
+      - file: includes_html/about-contact.html

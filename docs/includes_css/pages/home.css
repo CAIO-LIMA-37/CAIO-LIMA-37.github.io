@@ -1,0 +1,218 @@
+/* ==========================================================================
+   HOME / ABOUT PAGE
+   --------------------------------------------------------------------------
+   Layout específico da página inicial/about no template trestles do Quarto.
+   Este arquivo deve vir depois dos globais e dos componentes.
+   ========================================================================== */
+
+/* Garante a cor do kicker no hero em ambos os temas */
+body.quarto-light #hero-heading .hero-kicker,
+body.quarto-dark #hero-heading .hero-kicker,
+body.quarto-light #hero-heading .hero-kicker *,
+body.quarto-dark #hero-heading .hero-kicker * {
+  color: #7fb8ff !important;
+}
+
+/* Container principal da página about/hero */
+.quarto-about-trestles {
+  max-width: 98% !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+/* Coluna lateral da entidade/foto */
+.about-entity {
+  flex: 0 0 320px !important;
+  max-width: 320px !important;
+  background: var(--hero-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.75rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+/* Ajustes de alinhamento interno na coluna lateral */
+.about-entity > div:first-child,
+.about-entity > .about-image,
+.about-entity > header {
+  justify-self: start;
+}
+
+/* Hover da coluna lateral */
+.about-entity:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.34);
+  border-color: rgba(46, 164, 255, 0.25);
+}
+
+/* Foto principal */
+.about-entity .about-image {
+  width: 100%;
+  max-width: 280px;
+  justify-self: start;
+  margin-left: 0;
+}
+
+/* Nome/título da coluna lateral */
+.about-entity .title {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Área dos links */
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 0.5rem;
+}
+
+/* Botões/links */
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* Hover dos botões */
+.about-link:hover {
+  background: rgba(46, 164, 255, 0.12);
+  border-color: rgba(46, 164, 255, 0.35);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* Área principal de conteúdo */
+.about-contents {
+  flex: 1 !important;
+  max-width: 100% !important;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Hover do conteúdo principal */
+.about-contents:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.30);
+  border-color: rgba(46, 164, 255, 0.25);
+}
+
+/* Wrapper do conteúdo do hero */
+#hero-heading {
+  width: 100%;
+}
+
+/* Parágrafos gerais do hero */
+#hero-heading p {
+  max-width: 100%;
+  line-height: 1.85;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  margin-bottom: 1.1rem;
+}
+
+/* Itens de lista no hero */
+#hero-heading li {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+/* Título principal */
+#hero-heading h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 3.2vw, 3.25rem);
+  line-height: 1.1;
+  color: var(--hero-title);
+  text-shadow: var(--hero-title-glow);
+  max-width: 14ch;
+}
+
+/* Primeiro parágrafo / lead */
+#hero-heading > p {
+  font-size: 1.08rem;
+  line-height: 1.9;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  color: var(--hero-text);
+  margin-bottom: 1.15rem;
+}
+
+/* Subtítulos internos */
+#hero-heading h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+  color: var(--hero-title);
+  text-shadow: var(--hero-title-glow);
+}
+
+/* Responsividade da página home/about */
+@media (max-width: 991px) {
+  .quarto-about-trestles {
+    padding: 1.5rem 1rem;
+  }
+
+  .about-entity {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .about-entity .about-image {
+    max-width: 240px;
+  }
+
+  #hero-heading p {
+    font-size: 1rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #hero-heading h1 {
+    max-width: none;
+  }
+}
+
+/* Força containers gerais a ocuparem quase toda a tela */
+.container,
+.container-fluid,
+.quarto-container {
+  max-width: 98vw !important;
+  width: 98vw !important;
+}
+
+/* Ajuste específico do layout Trestles */
+.quarto-about-trestles {
+  grid-template-columns: 350px 1fr !important;
+  display: grid !important;
+  gap: 3rem !important;
+}
+
+/* Remove centralização/estrutura automática do conteúdo */
+#quarto-content.page-columns {
+  display: block !important;
+}

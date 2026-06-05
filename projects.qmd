@@ -1,35 +1,53 @@
 ---
-title: "Projects"
-subtitle: "Funded projects"
+title: "Projetos Acadêmicos e Pessoais"
+#subtitle: "Projetos acadêmicos e pessoais"
 page-layout: full
-listing: 
-- id: projects
-  sort: "started desc"
-  type: table
-  fields: [image, title, author, subtitle, description, funding, started, ended]
-  grid-item-align: left
-  grid-columns: 3
-  image-height: 30px
-  field-display-names: 
-      title: "Title"
-      author: "Team"
-      subtitle: "Funder"
-      started: "Start"
-      ended: "End"
-      funding: "Funding"
-#  categories: true
-#  sort-ui: true
-#  filter-ui: true
-  contents: 
-#    - projects/ 
-    - projects.yml 
+
+toc: false
+# Desativa o sumário automático.
+# Em uma home curta, o sumário normalmente só polui a página.
+
+listing:
+  - id: projetos-academicos
+    contents: projects-academicos.yml
+    type: table
+    sort: "ano desc"
+    fields: [image, title, institution, description, status, ano]
+    field-display-names:
+      title: "Projeto"
+      institution: "Instituição / contexto"
+      description: "Descrição"
+      status: "Status"
+      ano: "Ano"
+
+  - id: projetos-pessoais
+    contents: projects-pessoais.yml
+    type: table
+    sort: "ano desc"
+    fields: [image, title, stack, description, status, ano]
+    field-display-names:
+      title: "Projeto"
+      stack: "Tecnologias"
+      description: "Descrição"
+      status: "Status"
+      ano: "Ano"
+
+# "{{< include /files/includes/_socialshare.qmd >}}"
 ---
 
 
-:::{#projects}
+Nesta página, reuni projetos que representam minha trajetória em formação: alguns ligados à universidade e à pesquisa, outros desenvolvidos por iniciativa própria para estudo, portfólio e experimentação.
+
+## Projetos acadêmicos
+
+Aqui estão projetos vinculados à universidade, à pesquisa, à iniciação científica e a outras atividades acadêmicas.
+
+::: {#projetos-academicos}
 :::
 
+## Projetos pessoais
 
-<!--Include social share buttons-->
+Aqui estão projetos independentes, voltados a prática, exploração técnica, visualização, automação e desenvolvimento do meu portfólio.
 
-{{< include /files/includes/_socialshare.qmd >}}
+::: {#projetos-pessoais}
+:::

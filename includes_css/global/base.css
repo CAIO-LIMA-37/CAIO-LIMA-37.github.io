@@ -1,0 +1,12 @@
+.container, .container-fluid, .quarto-container {
+  max-width: 98vw !important;
+  width: 98vw !important;
+}
+
+#quarto-content.page-columns {
+  display: block !important;
+}
+
+main.content {
+  padding-bottom: 2rem;
+}

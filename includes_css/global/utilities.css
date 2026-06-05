@@ -1,0 +1,7 @@
+a {
+  transition: color 0.2s ease;
+}
+
+h1, h2, h3 {
+  text-rendering: optimizeLegibility;
+}

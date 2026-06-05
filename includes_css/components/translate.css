@@ -1,0 +1,112 @@
+:root {
+  --translate-scale: 0.92;
+  --translate-min-width: 160px;
+  --translate-font-size: 0.92rem;
+  --translate-padding-y: 0.35rem;
+  --translate-padding-x: 0.25rem;
+  --translate-wrapper-ml: 0.05rem;
+  --translate-wrapper-mr: 0rem;
+  --translate-wrapper-mt: 5px;
+  --translate-box-gap: 0.5rem;
+  --translate-navbar-padding-top: 0.35rem;
+  --translate-navbar-padding-right: 1rem;
+  --translate-navbar-padding-bottom: 0;
+  --translate-navbar-padding-left: 0rem;
+}
+
+.navbar,
+.navbar .container-fluid,
+.navbar-collapse,
+.navbar-nav,
+#quarto-search {
+  overflow: visible !important;
+}
+
+.translate-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--translate-box-gap);
+  padding:
+    var(--translate-navbar-padding-top)
+    var(--translate-navbar-padding-right)
+    var(--translate-navbar-padding-bottom)
+    var(--translate-navbar-padding-left);
+  position: relative;
+  z-index: 2000;
+}
+
+.navbar-translate-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: var(--translate-wrapper-ml);
+  margin-right: var(--translate-wrapper-mr);
+  margin-top: var(--translate-wrapper-mt);
+}
+
+.navbar-translate-wrapper .translate-box {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#google_translate_element {
+  position: relative;
+  z-index: 2001;
+  transform: scale(var(--translate-scale));
+  transform-origin: top right;
+}
+
+.goog-te-menu-frame.skiptranslate {
+  z-index: 999999 !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-te-gadget {
+  font-size: 0 !important;
+  color: transparent !important;
+  line-height: 0 !important;
+  white-space: nowrap !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  position: relative;
+  z-index: 5;
+  min-width: var(--translate-min-width);
+  font-size: var(--translate-font-size) !important;
+  padding: var(--translate-padding-y) var(--translate-padding-x);
+  background: #111;
+  color: #f5f7fa;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 999px;
+}
+
+body.quarto-light .goog-te-gadget .goog-te-combo {
+  background: #ffffff;
+  color: #1b1f23;
+  border: 1px solid rgba(0,0,0,0.14);
+}
+
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget-icon,
+.goog-te-gadget-icon_inline,
+.goog-te-gadget img {
+  display: none !important;
+}
+
+.goog-te-gadget a,
+.goog-te-gadget a span,
+.goog-te-gadget span[style] {
+  font-size: 0 !important;
+  color: transparent !important;
+  line-height: 0 !important;
+}

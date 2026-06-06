@@ -89,7 +89,7 @@ website:
   # Gera metadados de Twitter Card.
   # Mesmo que você não use Twitter/X, isso ainda ajuda alguns serviços a montar previews melhores.
 
-  site-url: "https://caio-lima-37.github.io"
+  site-url: "https://github.com/CAIO-LIMA-37/CAIO-LIMA-37.github.io.git"
   # URL principal do seu site publicado.
   # Isso é importante para metadados, previews e links canônicos.
   # Ajuste se no futuro você usar um domínio próprio.

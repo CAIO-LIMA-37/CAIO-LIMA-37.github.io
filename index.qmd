@@ -42,7 +42,7 @@ about:
     # Lista de links rápidos exibidos no bloco principal.
     # Aqui vale colocar apenas links realmente relevantes no momento.
 
-    - icon: building
+    - icon: buildings
       text: Lab
       href: https://www.lasse.ufpa.br/pt
       target: _blank
@@ -70,7 +70,7 @@ about:
       target: _blank
       # Seu repositório ou perfil GitHub.
 
-    - icon: mortarboard
+    - icon: file-earmark-person
       text: Lattes
       href: https://lattes.cnpq.br/8673076955649072
       target: _blank

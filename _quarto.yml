@@ -25,7 +25,11 @@ author-meta: "Caio Lima"
 
 website:
   title: "Caio Lima"   # Nome principal exibido no topo do site e na aba do navegador
+  
+  favicon: files/images/favicon.jpg  # Ícone pequeno que aparece na aba do navegador.
+
   image: files/profiles/quarto.JPG   # Imagem padrão usada em previews do site (ex.: compartilhamento em redes sociais)
+  
   description: "Researcher in Statistics, Machine Learning, and Generative Modeling"  # Descrição curta do site para metadados e buscadores
 
   navbar:

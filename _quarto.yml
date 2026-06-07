@@ -89,7 +89,7 @@ website:
   # Gera metadados de Twitter Card.
   # Mesmo que você não use Twitter/X, isso ainda ajuda alguns serviços a montar previews melhores.
 
-  site-url: "https://github.com/CAIO-LIMA-37/CAIO-LIMA-37.github.io.git"
+  site-url: "https://caio-lima-37.github.io"
   # URL principal do seu site publicado.
   # Isso é importante para metadados, previews e links canônicos.
   # Ajuste se no futuro você usar um domínio próprio.
@@ -159,7 +159,7 @@ format:
     # Tenta ofuscar endereços de e-mail no HTML para dificultar coleta automática por bots.
     # É útil se você mostrar e-mail em alguma página de contato.
 
-    link-external-filter: '^(?:http:|https:)\/\/drganghe\.github\.io\/custom'
+    # link-external-filter: '^(?:http:|https:)\/\/drganghe\.github\.io\/custom'
     # Esta opção usa uma expressão regular (regex) para dizer ao Quarto que certos links,
     # mesmo começando com http/https, devem ser tratados como "internos" e não como externos.
     # No template original, isso fazia sentido para links de um domínio específico do autor.

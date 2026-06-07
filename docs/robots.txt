@@ -1,1 +1,1 @@
-Sitemap: https://github.com/CAIO-LIMA-37/CAIO-LIMA-37.github.io.git/sitemap.xml
+Sitemap: https://caio-lima-37.github.io/sitemap.xml

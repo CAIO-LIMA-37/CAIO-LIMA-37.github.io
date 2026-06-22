@@ -71,3 +71,36 @@ body.quarto-dark {
   color: var(--hero-muted);
   border-left: 3px solid color-mix(in srgb, var(--hero-kicker) 55%, transparent);
 }
+
+:root {
+  --project-title: #b44b63;
+  --project-title-hover: #9f3c55;
+  --project-meta-label: var(--hero-muted);
+  --project-meta-value: var(--hero-title);
+  --project-description: var(--hero-text);
+  --project-divider: var(--hero-border);
+  --project-badge-bg: rgba(255, 255, 255, 0.9);
+  --project-badge-text: #111827;
+}
+
+body.quarto-light {
+  --project-title: #b24763;
+  --project-title-hover: #963850;
+  --project-meta-label: var(--hero-muted);
+  --project-meta-value: var(--hero-title);
+  --project-description: var(--hero-text);
+  --project-divider: var(--hero-border);
+  --project-badge-bg: rgba(15, 23, 42, 0.06);
+  --project-badge-text: #1f2937;
+}
+
+body.quarto-dark {
+  --project-title: #d2647f;
+  --project-title-hover: #e07f97;
+  --project-meta-label: var(--hero-muted);
+  --project-meta-value: var(--hero-title);
+  --project-description: var(--hero-text);
+  --project-divider: var(--hero-border);
+  --project-badge-bg: rgba(255, 255, 255, 0.92);
+  --project-badge-text: #111827;
+}

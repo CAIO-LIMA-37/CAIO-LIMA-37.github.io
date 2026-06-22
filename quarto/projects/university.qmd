@@ -1,0 +1,64 @@
+---
+title: "University Projects"
+page-layout: full
+toc: false
+format:
+  html:
+    anchor-sections: false
+---
+
+:::{.hero-section-title}
+## University Projects
+:::
+
+::: {.projects-intro-box}
+This page brings together projects developed during my university career, especially in academic and institutional contexts. Included here are experiences related to scientific initiation, research, outreach, tutoring, and other activities related to the university environment.
+:::
+
+```{=html}
+<div class="project-list">
+
+  <article class="project-card">
+    <div class="project-card-image">
+      <img src="https://blog.optbot.com.br/wp-content/uploads/2024/08/education-chatbots-1024x700.png" alt="Projeto acadêmico UFPA">
+    </div>
+
+    <div class="project-card-content">
+      <h2 class="project-card-title neon-title">
+        Research in Generative Artificial Intelligence for Use in Intelligent Tutors
+      </h2>
+
+      <div class="project-card-meta-grid">
+        <div class="project-card-meta-item">
+          <span class="meta-label">Institution</span>
+          <span class="meta-value">UFPA</span>
+        </div>
+
+        <div class="project-card-meta-item">
+          <span class="meta-label">Project Nature</span>
+          <span class="meta-value">Scientific Initiation</span>
+        </div>
+      </div>
+
+      <div class="project-card-description-box">
+        <p class="project-card-description">
+          This project investigates the use of Generative Artificial Intelligence to support the creation of intelligent tutors capable of providing personalized explanations, adaptive examples, and interactive study materials. The proposal aims to integrate AI techniques with didactic resources focused on teaching and learning, with a focus on producing more accessible, dynamic content aligned with students' needs.
+        </p>
+      </div>
+
+      <div class="project-card-footer">
+        <div class="project-card-timeline">
+          <span class="project-card-footer-label">Year:</span>
+          <span class="project-card-year">2025</span>
+        </div>
+
+        <div class="project-card-status-wrap">
+          <span class="project-card-status-dot"></span>
+          <span class="project-card-status">In Progress</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</div>
+```

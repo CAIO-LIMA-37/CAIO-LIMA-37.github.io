@@ -1,35 +1,14 @@
 [
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projetos Acadêmicos e Pessoais",
-    "section": "",
-    "text": "Nesta página, reuni projetos que representam minha trajetória em formação: alguns ligados à universidade e à pesquisa, outros desenvolvidos por iniciativa própria para estudo, portfólio e experimentação."
-  },
-  {
-    "objectID": "projects.html#projetos-acadêmicos",
-    "href": "projects.html#projetos-acadêmicos",
-    "title": "Projetos Acadêmicos e Pessoais",
-    "section": "Projetos acadêmicos",
-    "text": "Projetos acadêmicos\nAqui estão projetos vinculados à universidade, à pesquisa, à iniciação científica e a outras atividades acadêmicas.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Projeto\n        \n         \n          Instituição / contexto\n        \n         \n          Descrição\n        \n         \n          Status\n        \n         \n          Ano\n        \n         \n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n \n\n\nProjeto\n\n\nInstituição / contexto\n\n\nDescrição\n\n\nStatus\n\n\nAno\n\n\n\n\n\n\n\n\n\nTítulo do projeto acadêmico\n\n\nUFPA · Iniciação Científica\n\n\nBreve descrição do objetivo do projeto, métodos utilizados e foco principal.\n\n\nEm andamento\n\n\n2025\n\n\n\n\n\n\n\nDashboard para análise estatística\n\n\nUFPA · Projeto de pesquisa\n\n\nDesenvolvimento de visualizações e organização de dados para apoio a análises acadêmicas.\n\n\nConcluído\n\n\n2024\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects.html#projetos-pessoais",
-    "href": "projects.html#projetos-pessoais",
-    "title": "Projetos Acadêmicos e Pessoais",
-    "section": "Projetos pessoais",
-    "text": "Projetos pessoais\nAqui estão projetos independentes, voltados a prática, exploração técnica, visualização, automação e desenvolvimento do meu portfólio.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Projeto\n        \n         \n          Tecnologias\n        \n         \n          Descrição\n        \n         \n          Status\n        \n         \n          Ano\n        \n         \n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n \n\n\nProjeto\n\n\nTecnologias\n\n\nDescrição\n\n\nStatus\n\n\nAno\n\n\n\n\n\n\n\n\n\nMeu website acadêmico\n\n\nQuarto, CSS, HTML\n\n\nDesenvolvimento e customização do meu site pessoal com foco acadêmico, visual limpo e organização de conteúdo.\n\n\nEm andamento\n\n\n2025\n\n\n\n\n\n\n\nProjeto de automação em Python\n\n\nPython\n\n\nAutomação de tarefas e organização de fluxo de trabalho para atividades repetitivas.\n\n\nConcluído\n\n\n2024\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
+    "objectID": "quarto/about.html",
+    "href": "quarto/about.html",
     "title": "About",
     "section": "",
     "text": "I am a Statistics student and researcher focused on the mathematical foundations of Machine Learning, Statistical Inference, and Generative Modeling.\nMy work is driven by a fundamental question: how can intelligent systems be understood, constructed, and interpreted through rigorous mathematical structures?\nI am particularly interested in probability theory, stochastic processes, and the theoretical mechanisms underlying neural networks and large language models. Rather than treating models as black boxes, I aim to derive and analyze them from first principles — understanding their behavior, limitations, and expressive power.\n\n\n\nMy long-term goal is to contribute to the development of interpretable and theoretically grounded artificial intelligence, bridging the gap between statistical theory and modern machine learning systems.\nI am currently exploring:\n\nProbabilistic modeling and statistical inference\n\nGenerative models and latent variable methods\n\nNeural networks from a mathematical perspective\n\nNatural Language Processing (NLP) and Large Language Models (LLMs)\n\nScientific computing and document systems (LaTeX, structured knowledge)\n\n\n\n\n\n\nBachelor’s Degree in Statistics — Federal University of Pará (in progress)\n\nUndergraduate researcher (PIBIC) in Artificial Intelligence and Statistical Modeling\n\n\n\n\n\nBeyond formal research, I am deeply interested in developing a visual and intuitive understanding of mathematics — combining abstraction, structure, and interpretation.\nI see mathematics not only as a tool, but as a language capable of expressing complex systems, intelligence, and patterns in their purest form."
   },
   {
-    "objectID": "about.html#caio-lima",
-    "href": "about.html#caio-lima",
+    "objectID": "quarto/about.html#caio-lima",
+    "href": "quarto/about.html#caio-lima",
     "title": "About",
     "section": "",
     "text": "I am a Statistics student and researcher focused on the mathematical foundations of Machine Learning, Statistical Inference, and Generative Modeling.\nMy work is driven by a fundamental question: how can intelligent systems be understood, constructed, and interpreted through rigorous mathematical structures?\nI am particularly interested in probability theory, stochastic processes, and the theoretical mechanisms underlying neural networks and large language models. Rather than treating models as black boxes, I aim to derive and analyze them from first principles — understanding their behavior, limitations, and expressive power.\n\n\n\nMy long-term goal is to contribute to the development of interpretable and theoretically grounded artificial intelligence, bridging the gap between statistical theory and modern machine learning systems.\nI am currently exploring:\n\nProbabilistic modeling and statistical inference\n\nGenerative models and latent variable methods\n\nNeural networks from a mathematical perspective\n\nNatural Language Processing (NLP) and Large Language Models (LLMs)\n\nScientific computing and document systems (LaTeX, structured knowledge)\n\n\n\n\n\n\nBachelor’s Degree in Statistics — Federal University of Pará (in progress)\n\nUndergraduate researcher (PIBIC) in Artificial Intelligence and Statistical Modeling\n\n\n\n\n\nBeyond formal research, I am deeply interested in developing a visual and intuitive understanding of mathematics — combining abstraction, structure, and interpretation.\nI see mathematics not only as a tool, but as a language capable of expressing complex systems, intelligence, and patterns in their purest form."

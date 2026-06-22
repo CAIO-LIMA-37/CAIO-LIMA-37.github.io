@@ -35,6 +35,10 @@ body.quarto-dark #hero-heading .hero-kicker * {
   border-radius: 18px;
   padding: 1.75rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+
+  position: sticky;
+  top: 6rem;
+  align-self: start;
 }
 
 /* Ajustes de alinhamento interno na coluna lateral */
@@ -54,7 +58,7 @@ body.quarto-dark #hero-heading .hero-kicker * {
 /* Foto principal */
 .about-entity .about-image {
   width: 100%;
-  max-width: 280px;
+  max-width: 220px;
   justify-self: start;
   margin-left: 0;
 }

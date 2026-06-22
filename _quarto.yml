@@ -8,15 +8,16 @@ project:
     - python xlsx_to_yml.py     # Executa este script antes do render para atualizar publications.yml
   render:
     - index.qmd
-    - about.qmd
-    - "!contact.qmd"
+    - quarto/about.qmd
+    - "!quarto/contact.qmd"
     - 404.qmd
-    - "!people.qmd"
-    - "!posts.qmd"
-    - projects.qmd
-    - "!pub-listing.qmd"
-    - "!publications.qmd"
-    - "!teaching.qmd"
+    - "!quarto/people.qmd"
+    - "!quarto/posts.qmd"
+    - quarto/projects/university.qmd
+    - "!quarto/projects/personal.qmd"
+    - "!quarto/pub-listing.qmd"
+    - "!quarto/publications.qmd"
+    - "!quarto/teaching.qmd"
 # =========================
 # Metadados globais do site
 # =========================
@@ -40,16 +41,20 @@ website:
         href: index.qmd
 
       - text: About     # Página com apresentação pessoal, trajetória e interesses
-        href: about.qmd
-
+        href: quarto/about.qmd
+      
       - text: Projects  # Página com projetos de pesquisa, código e aplicações
-        href: projects.qmd
+        menu:
+          - text: University
+            href: quarto/projects/university.qmd
+#          - text: Personal
+#            href: quarto/projects/personal.qmd
 
 #      - text: Publications   # Página com lista de publicações
-#        href: pub-listing.qmd
+#        href: quarto/pub-listing.qmd
 
 #      - text: Contact   # Página com formas de contato e links externos
-#        href: contact.qmd
+#        href: quarto/contact.qmd
 
     right:
 #      - text: CV        # Link para o currículo em PDF
@@ -123,6 +128,7 @@ format:
       - includes_css/components/hero.css
       - includes_css/components/translate.css
       - includes_css/pages/home.css
+      - includes_css/pages/projects.css
     # Arquivo CSS customizado do site.
     # É aqui que você ajusta aparência fina, como cores, fontes, margens, espaçamentos e detalhes visuais.
 

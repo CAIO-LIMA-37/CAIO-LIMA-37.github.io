@@ -3,3 +3,11 @@
 **/*.quarto_ipynb
 
 /.luarc.json
+.Rproj.user/
+
+
+*_cache/
+
+*.log
+
+.DS_Store

@@ -299,6 +299,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <link rel="stylesheet" href="includes_css/components/hero.css">
 <link rel="stylesheet" href="includes_css/components/translate.css">
 <link rel="stylesheet" href="includes_css/pages/home.css">
+<link rel="stylesheet" href="includes_css/pages/projects.css">
 
 
 
@@ -323,13 +324,20 @@ document.addEventListener("DOMContentLoaded", function () {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="./quarto/about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
-<span class="menu-text">Projects</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="./quarto/projects/university.html">
+ <span class="dropdown-text">University</span></a>
   </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -358,7 +366,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div class="quarto-about-trestles column-page">
   <div class="about-entity">
-    <img src="files/images/placeholder4.JPG" class="about-image
+    <img src="/files/images/placeholder4.JPG" class="about-image
   rounded " style="width: 25em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">

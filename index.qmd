@@ -7,7 +7,7 @@ description-meta: "Personal website of Caio Lima, researcher in Statistics, Mach
 # Descrição curta usada em metadados do site.
 # Isso ajuda em previews, compartilhamento e mecanismos de busca.
 
-image: "files/images/placeholder4.JPG"
+image: "/files/images/placeholder4.JPG"
 # Imagem principal da página inicial.
 # Já que você trocou a imagem, este campo deve apontar para o novo arquivo.
 

@@ -1,0 +1,418 @@
+#title-block-header {
+  display: none;
+}
+
+.quarto-title-block .title {
+  text-align: center;
+}
+
+.quarto-title-block .quarto-title-banner,
+.quarto-title-block .title,
+.quarto-title-block .description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-columns,
+.page-layout-full .content,
+main.content,
+#quarto-content {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+
+.project-list {
+  display: grid;
+  gap: 3.25rem;
+  margin-top: 2.25rem;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--project-divider);
+}
+
+.project-card-image img {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+  box-shadow: var(--hero-shadow);
+}
+
+.project-card-content {
+  min-width: 0;
+}
+
+.project-card-title {
+  margin: 0 0 1rem 0;
+  color: var(--project-title);
+  font-size: clamp(2rem, 2.6vw, 3rem);
+  line-height: 1.08;
+  font-weight: 700;
+  text-shadow:
+    0 0 4px rgba(182, 75, 115, 0.18),
+    0 0 10px rgba(182, 75, 115, 0.12);
+}
+
+.project-card-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 1rem 2rem;
+  margin: 1.2rem 0 1.5rem;
+}
+
+.project-meta-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--project-divider);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--hero-bg) 88%, transparent);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.project-meta-box::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--hero-kicker), var(--project-title));
+  border-radius: 16px 0 0 16px;
+}
+
+.project-card-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.meta-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--project-meta-label);
+  font-weight: 800;
+  opacity: 0.85;
+}
+
+.meta-value {
+  font-size: 1.08rem;
+  color: var(--project-meta-value);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.project-card-description {
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  color: var(--project-description);
+  font-size: 1.08rem;
+  line-height: 1.9;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.project-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--project-divider);
+}
+
+.project-card-timeline-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--project-divider);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--hero-bg) 88%, transparent);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.project-card-footer-label {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--project-meta-label);
+  font-weight: 800;
+}
+
+.project-card-year {
+  font-size: 1rem;
+  color: var(--project-meta-value);
+  font-weight: 700;
+}
+
+.project-card-status-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1rem;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.project-card-status-wrap.is-progress {
+  background: color-mix(in srgb, #22c55e 12%, var(--hero-bg));
+  border-color: color-mix(in srgb, #22c55e 28%, transparent);
+  color: var(--project-meta-value);
+}
+
+.project-card-status-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 6px color-mix(in srgb, #22c55e 16%, transparent);
+  flex: 0 0 auto;
+}
+
+.project-card-status {
+  line-height: 1;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  border-radius: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.project-meta-box {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.project-meta-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.07);
+  border-color: color-mix(in srgb, var(--hero-kicker) 28%, var(--project-divider));
+}
+
+.hero-section-title h2 {
+  /* Remove a margem padrão do h2.
+     Se aumentar, cria espaço em volta do título.
+     Se deixar 0, o título fica mais "colado" e controlado. */
+  margin: 0;
+
+  /* Centraliza o texto horizontalmente.
+     Pode ser left, center ou right. */
+  text-align: center;
+
+  /* Define a cor principal do texto.
+     Aqui é um rosa/vinho.
+     Você pode trocar por outra cor em hexadecimal, como #ff4fa0 ou #ffffff. */
+  color: #b64b73;
+
+  /* Define o tamanho do texto de forma responsiva.
+     clamp(min, ideal, max):
+     - 2.4rem = tamanho mínimo
+     - 2.8vw = tamanho flexível conforme a largura da tela
+     - 4.8rem = tamanho máximo
+
+     Se aumentar o primeiro número, o título fica maior até no celular.
+     Se aumentar o valor do meio (vw), ele cresce mais rápido com a tela.
+     Se aumentar o último número, ele pode ficar bem maior no desktop. */
+  font-size: clamp(2.4rem, 2.8vw, 4.8rem);
+
+  /* Controla a espessura da fonte.
+     400 = normal
+     700 = bold
+     800 = bem forte
+     900 = muito pesado */
+  font-weight: 800;
+
+  /* Controla o espaçamento entre as letras.
+     0.01em = leve abertura
+     Se aumentar, as letras ficam mais afastadas.
+     Se usar valor negativo, elas ficam mais juntas. */
+  letter-spacing: 0.01em;
+
+  /* Controla a altura entre as linhas do texto.
+     Como é um título grande, 1.05 deixa compacto e elegante.
+     Se aumentar para 1.2 ou 1.3, o título quebra com mais respiro.
+     Se diminuir demais, pode ficar apertado. */
+  line-height: 1.2;
+
+  /* Cria o efeito neon/brilho com várias sombras.
+     Cada linha segue esta lógica:
+     x y blur color
+
+     Neste caso:
+     - 0 0 = sombra sem deslocamento, brilho em volta do texto
+     - 6px / 14px / 28px = quanto maior, mais espalhado o brilho
+     - rgba(..., 0.30) = opacidade do brilho; maior valor = brilho mais forte
+
+     A primeira sombra é mais próxima e visível.
+     As seguintes aumentam a área do glow.
+     Se aumentar os blur (6, 14, 28), o neon fica mais difuso.
+     Se aumentar a opacidade (0.30, 0.22, 0.14), o neon fica mais forte.
+     Se diminuir esses valores, o efeito fica mais sutil. */
+  text-shadow:
+    0 0 6px rgba(182, 75, 115, 0.30),
+    0 0 14px rgba(182, 75, 115, 0.22),
+    0 0 28px rgba(182, 75, 115, 0.14);
+}
+
+.neon-title {
+  color: #b64b73;
+  text-shadow:
+    0 0 6px rgba(182, 75, 115, 0.30),
+    0 0 14px rgba(182, 75, 115, 0.22),
+    0 0 28px rgba(182, 75, 115, 0.14);
+}
+
+/* Aplica o mesmo estilo-base para as duas caixas:
+   - .projects-intro-box = caixa do texto introdutório da página
+   - .project-card-description-box = caixa da descrição do projeto */
+.projects-intro-box,
+.project-card-description-box {
+
+  /* Cor de fundo da caixa.
+     rgba(255, 255, 255, 0.03) = branco com 3% de opacidade.
+     Se aumentar 0.03 para 0.06 ou 0.08, a caixa fica mais visível/clara.
+     Se diminuir para 0.01, ela fica mais discreta. */
+  background: rgba(255, 255, 255, 0.03);
+
+  /* Borda da caixa.
+     1px = espessura da borda
+     solid = tipo da borda
+     rgba(..., 0.08) = cor branca com 8% de opacidade
+     Se aumentar 1px para 2px, a borda fica mais forte.
+     Se aumentar 0.08 para 0.15, ela aparece mais. */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  /* Arredonda os cantos.
+     18px = arredondamento médio/elegante.
+     Se aumentar para 24px, fica mais "macio".
+     Se diminuir para 10px, fica mais reto e sóbrio. */
+  border-radius: 18px;
+
+  /* Sombra da caixa.
+     Estrutura: horizontal vertical blur cor
+     0 = sem deslocamento para os lados
+     12px = sombra desce para baixo
+     30px = blur, ou seja, espalhamento
+     rgba(0,0,0,0.20) = preto com 20% de opacidade
+
+     Se aumentar 12px, a sombra desce mais.
+     Se aumentar 30px, ela fica mais suave/espalhada.
+     Se aumentar 0.20, ela fica mais escura/forte. */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Estilo específico só da caixa da introdução */
+.projects-intro-box {
+
+  /* Espaçamento interno da caixa.
+     Primeiro valor = cima/baixo
+     Segundo valor = esquerda/direita
+     1.35rem 1.5rem = mais respiro por dentro.
+     Se aumentar, o texto fica mais "folgado".
+     Se diminuir, a caixa fica mais compacta. */
+  padding: 1.35rem 1.5rem;
+
+  /* Espaçamento externo da caixa
+     Ordem: topo direita baixo esquerda
+     1.25rem 0 2.2rem 0
+     - 1.25rem em cima
+     - 0 à direita
+     - 2.2rem embaixo
+     - 0 à esquerda
+
+     Se aumentar o terceiro valor (2.2rem), cresce o espaço abaixo.
+     Se aumentar o primeiro, sobe mais espaço acima da caixa. */
+  margin: 1.25rem 0 1.6rem 0;
+}
+
+
+/* Aplica tipografia tanto no texto da própria caixa
+   quanto em parágrafos dentro dela */
+.projects-intro-box p,
+.projects-intro-box {
+
+  /* Tamanho da fonte.
+     1.06rem = levemente maior que texto padrão.
+     Se aumentar para 1.12rem, o texto fica mais legível e destacado.
+     Se diminuir para 1rem, fica mais normal/discreto. */
+  font-size: 1.06rem;
+
+  /* Altura entre linhas.
+     1.9 = texto mais arejado.
+     Se aumentar para 2.0 ou 2.1, o texto respira mais.
+     Se diminuir para 1.6 ou 1.7, ele fica mais compacto. */
+  line-height: 1.9;
+
+  /* Cor do texto.
+     Usa uma variável CSS já definida no seu tema.
+     Se trocar para outra variável ou cor fixa, muda a aparência do texto.
+     Exemplo: #d8d8d8, white, var(--hero-text), etc. */
+  color: var(--project-description);
+}
+
+
+/* Estilo específico da caixa da descrição do projeto */
+.project-card-description-box {
+
+  /* Espaçamento interno da descrição.
+     Mesmo raciocínio do padding acima:
+     mais valor = mais espaço dentro da caixa. */
+  padding: 1.35rem 1.5rem;
+
+  /* Espaçamento externo da descrição.
+     Ordem: topo direita baixo esquerda
+     1.2rem 0 1.5rem 0
+     Dá respiro antes e depois da caixa. */
+  margin: 1.2rem 0 1.5rem 0;
+
+  /* Define animações suaves quando alguma propriedade muda.
+     Aqui você está animando:
+     - transform
+     - box-shadow
+     - border-color
+
+     0.25s = duração da animação
+     ease = aceleração suave
+
+     Se aumentar para 0.4s, a animação fica mais lenta.
+     Se diminuir para 0.15s, fica mais rápida.
+     Se trocar ease por linear, o movimento fica mais seco/constante. */
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card-description-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+  border-color: rgba(46, 164, 255, 0.22);
+}
+
+@media (max-width: 640px) {
+  .projects-intro-box,
+  .project-card-description-box {
+    padding: 1.1rem 1rem;
+    border-radius: 15px;
+  }
+
+  .project-card-description {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}

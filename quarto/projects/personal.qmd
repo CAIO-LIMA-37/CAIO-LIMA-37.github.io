@@ -1,0 +1,23 @@
+---
+title: "Personal Projects"
+page-layout: full
+toc: false
+
+listing:
+  - id: projetos-pessoais
+    contents: ../../projects-pessoais.yml
+    type: table
+    sort: "ano desc"
+    fields: [image, title, stack, description, status, ano]
+    field-display-names:
+      title: "Projeto"
+      stack: "Tecnologias"
+      description: "Descrição"
+      status: "Status"
+      ano: "Ano"
+---
+
+Aqui estão projetos independentes, voltados a prática, exploração técnica, visualização, automação e desenvolvimento do meu portfólio.
+
+::: {#projetos-pessoais}
+:::
